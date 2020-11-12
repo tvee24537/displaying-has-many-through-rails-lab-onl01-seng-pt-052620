@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The Hospo Webapp</title>
+    </head>
+    <body>
+        <ul>
+        <% @patients.each do |patient| %>
+            <li>Name: <%= patient.name %></li>
+            <li>Number of Appointments: <%= patient.appointments.length %></li>
+            <br>
+        <% end %>
+        </ul>
+    </body>
+</html> 

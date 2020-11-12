@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The Hospo Webapp</title>
+    </head>
+    <body>
+        <h1>Appointment Number <%= @appointment.id %>.</h1>
+        <h2><%= "#{@appointment.appointment_datetime.strftime("%B %d, %Y at %H:%M")}" %></h2>
+        <h3>Doctor: <%= link_to @appointment.doctor.name, doctor_path(@appointment.doctor) %></h3>
+        <h3>Patient: <%= link_to @appointment.patient.name, patient_path(@appointment.patient) %></h3>
+    </body>
+</html> 

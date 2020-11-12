@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The Hospo Webapp</title>
+    </head>
+    <body>
+        <h1><%= @doctor.name %>.</h1>
+        <ul>
+        <% @doctor.appointments.each do |app| %>
+            <li><%= link_to app.appointment_datetime.strftime("%B %d, %Y at %H:%M"), appointment_path(app) %> with <%= link_to app.patient.name, patient_path(app.patient) %></li>
+        <% end %>
+        </ul>
+    </body>
+</html> 
